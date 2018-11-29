@@ -21,8 +21,7 @@ public class FXMLApp311 extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("LoginUI.fxml"));
         
-        Scene scene = new Scene(root);
-        
+        Scene scene = new Scene(root); 
         stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();
@@ -36,3 +35,4 @@ public class FXMLApp311 extends Application {
     }
     
 }
+//Is this working?
