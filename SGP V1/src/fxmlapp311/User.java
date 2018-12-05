@@ -33,7 +33,7 @@ public class User implements Serializable{
                 //= userGradeProfile.getBadGrades();
 
     
-    public User(String newFirstName, String newLastName, String newUsername, String newPassword, ArrayList userGrades){
+    public User(String newFirstName, String newLastName, String newUsername, String newPassword){
         firstName = newFirstName;
         lastName = newLastName;
         username = newUsername;
