@@ -41,7 +41,7 @@ public class LoginCntl {
         }    
     }
     
-    @FXML protected void handleCreateProfile(ActionEvent event) throws IOException {
+    @FXML protected void handleCreateProfileButton(ActionEvent event) throws IOException {
        
         Stage theStage = (Stage) actiontarget.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("ProfileUI.fxml"));

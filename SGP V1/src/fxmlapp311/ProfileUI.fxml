@@ -27,7 +27,7 @@
             <Label layoutX="252.0" layoutY="344.0" text="Confirm Password" />
             
 
-            <Button fx:id="createProfileButton" cancelButton="true" layoutX="482.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleCreateProfileButton" text="Make Profile" />
+            <Button fx:id="makeProfileButton" cancelButton="true" layoutX="482.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleMakeProfileButton" text="Make Profile" />
 
 
          </children>

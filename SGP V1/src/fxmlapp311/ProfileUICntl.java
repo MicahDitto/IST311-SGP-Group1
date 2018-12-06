@@ -26,7 +26,7 @@ import javafx.stage.Stage;
 public class ProfileUICntl implements Initializable {
 
     @FXML
-    private Button createProfileButton;
+    private Button makeProfileButton;
     @FXML private Text actiontarget;
     /**
      * Initializes the controller class.
@@ -37,7 +37,7 @@ public class ProfileUICntl implements Initializable {
     }    
 
     @FXML
-    private void handleCreateProfileButton(ActionEvent event) throws IOException {
+    private void handleMakeProfileButton(ActionEvent event) throws IOException {
         Stage theStage = (Stage) actiontarget.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("ProfileUICntl.fxml"));
         Scene scene = new Scene (root, 600, 800);
