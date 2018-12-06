@@ -10,13 +10,11 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -38,12 +36,16 @@ public class ProfileUICntl implements Initializable {
 
     @FXML
     private void handleMakeProfileButton(ActionEvent event) throws IOException {
-        Stage theStage = (Stage) actiontarget.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("ProfileUICntl.fxml"));
-        Scene scene = new Scene (root, 600, 800);
-        theStage.setTitle("Profile");
-        theStage.setScene(scene);
-        theStage.show();
+        Alert confirm = new Alert(AlertType.INFORMATION);
+        
+        
+        confirm.setTitle("Create Profile");
+        confirm.setHeaderText("Profile Confirmation");
+        confirm.setContentText("I have a great message for you!");
+
+        confirm.showAndWait();
+        
+        
     }
     
 }
