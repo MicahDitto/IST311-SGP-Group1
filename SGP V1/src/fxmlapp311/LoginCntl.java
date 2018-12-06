@@ -5,8 +5,12 @@
  */
 package fxmlapp311;
 
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.text.*;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -15,6 +19,8 @@ public class LoginCntl {
     @FXML private Text actiontarget;
     @FXML private TextField usernameField;
     @FXML private PasswordField passwordField;
+    //@FXML private Button actiontargetButton;
+
     
     public LoginCntl(){
         System.out.println("LoginCntl constructor called.");
@@ -35,11 +41,15 @@ public class LoginCntl {
         }    
     }
     
-    @FXML protected void handleCreateProfile(ActionEvent event) {
-        actiontarget.setText("Create Profile");
+    @FXML protected void handleCreateProfile(ActionEvent event) throws IOException {
+       
         Stage theStage = (Stage) actiontarget.getScene().getWindow();
-        theStage.hide();
-        NavigationCntl.getNavigationCntl(theStage).getProfileCntl(theStage);
+        Parent root = FXMLLoader.load(getClass().getResource("ProfileUI.fxml"));
+        Scene scene = new Scene (root, 600, 800);
+        theStage.setTitle("Profile");
+        theStage.setScene(scene);
+        theStage.show();
+        
     }
     
     

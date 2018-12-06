@@ -71,4 +71,6 @@ public class UserUICntl implements Initializable {
         // Could pass the user to the UserCntl to show in a new Stage/Scene
     }
     
+    
+    
 }

@@ -23,7 +23,7 @@ public class PersistentDataCntl {
     private final String DATA_FILE_NAME = "AppData.ser";
     
     private PersistentDataCntl(){
-        readSerializedDataModel(); 
+        //readSerializedDataModel(); 
         if(thePeristentDataCollection == null){
             thePeristentDataCollection = new PeristentDataCollection();
             writeSerializedDataModel();
