@@ -56,7 +56,7 @@ public class ProfileUICntl implements Initializable {
         
         Stage theStage = (Stage) makeProfileButton.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("LoginUI.fxml"));
-        Scene scene = new Scene (root, 300, 500);
+        Scene scene = new Scene (root, 330, 200);
         theStage.setTitle("Login");
         theStage.setScene(scene);
         theStage.show();
