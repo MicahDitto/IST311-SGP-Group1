@@ -14,7 +14,7 @@ import javafx.stage.Stage;
 
 
 public class ProfileCntl {
-    @FXML private Stage stage;
+    @FXML public Stage stage;
     @FXML private Text actiontarget;
     private static ProfileCntl theProfileCntl;
     @FXML private Button createProfileButton;
@@ -25,6 +25,10 @@ public class ProfileCntl {
        stage = theExistingStage;
        //this.setUpCreateProfileScene();
        stage.show();
+    }
+    
+    public static ProfileCntl getExistingProfileCntl(){
+        return theProfileCntl;
     }
     
      public static ProfileCntl getProfileCntl(Stage theStage){

@@ -29,6 +29,7 @@
 
             <Button fx:id="makeProfileButton" cancelButton="true" layoutX="482.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleMakeProfileButton" text="Make Profile" />
 
+            <Button fx:id="backToLoginButton" cancelButton="true" layoutX="50.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleBackToLoginButton" text="Back To Login" />
 
          </children>
       </AnchorPane>

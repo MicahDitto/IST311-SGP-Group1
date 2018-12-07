@@ -45,7 +45,7 @@ public class LoginCntl {
        
         Stage theStage = (Stage) actiontarget.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("ProfileUI.fxml"));
-        Scene scene = new Scene (root, 600, 800);
+        Scene scene = new Scene (root, 600, 500);
         theStage.setTitle("Profile");
         theStage.setScene(scene);
         theStage.show();
