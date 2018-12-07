@@ -53,8 +53,8 @@ public class ProfileCntl {
             e.printStackTrace();
         }
     }
-    @FXML
-    public void handleCreateProfileButton() throws IOException{
+//    @FXML
+//    public void handleCreateProfileButton() throws IOException{
 //        User newUser = new User("AddFirst", "AddLast", "AddUsername", "AddPassword");
 //        Stage theStage = (Stage) createProfileButton.getScene().getWindow();
 //        Parent root = FXMLLoader.load(getClass().getResource("ProfileUI.fxml"));
@@ -62,13 +62,13 @@ public class ProfileCntl {
 //        theStage.setTitle("Profile");
 //        theStage.setScene(scene);
 //        theStage.show();
-        
-        
+//        
+//        
 //        UserCntl.getUserCntl(theStage).addUserRow(newUser);
 //        listOfUsers = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getuserList().getUserData();
 //        userTable.setItems(listOfUsers);
-        
-    }
+//        
+//    }
     
     
     
