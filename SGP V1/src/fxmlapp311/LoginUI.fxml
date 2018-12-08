@@ -27,7 +27,7 @@
     </HBox>
 
     <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-   <Button mnemonicParsing="false" onAction="#handleCreateProfile" text="Create Profile" GridPane.rowIndex="4" />
+   <Button mnemonicParsing="false" onAction="#handleCreateProfileButton" text="Create Profile" GridPane.rowIndex="4" />
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints />
