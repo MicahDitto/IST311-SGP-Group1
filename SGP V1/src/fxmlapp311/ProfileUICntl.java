@@ -34,12 +34,13 @@ public class ProfileUICntl implements Initializable {
     private Button makeProfileButton;
     @FXML private Text actiontarget;
     @FXML private ObservableList<User> listOfUsers;
-    @FXML private TableView<User> userTable;
+    @FXML private TableView<User> userTable = new TableView<User>();
     @FXML private TextField fnTextField;
     @FXML private TextField lnTextField;
     @FXML private TextField unTextField;
     @FXML private TextField passwordTextField;
     @FXML private TextField confirmPasswordTextField;
+    @FXML private UserUICntl userUIControl;
     
     
     @Override
@@ -66,8 +67,9 @@ public class ProfileUICntl implements Initializable {
 
         //Add user to UserList
         //Persistant Data
-        UserCntl.getUserCntl(theStage).addUserRow(newUser);
-        listOfUsers = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getuserList().getUserData();
+//        UserCntl.getUserCntl(theStage).addUserRow(newUser);
+        listOfUsers = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getUserList().getUserData();
+//        userUIControl.updateTableView(listOfUsers);
         userTable.setItems(listOfUsers);
         
         confirm.setTitle("Create Profile");

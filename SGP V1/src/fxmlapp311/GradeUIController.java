@@ -37,7 +37,7 @@ public class GradeUIController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // Get the data for the table
-        listOfGrades = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getgradeList().getGradeData();
+        listOfGrades = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getGradeList().getGradeData();
     
         // Set up the table columns and link them to the table data fields
         classNameColumn.setCellValueFactory(new PropertyValueFactory<Grade,String>("className"));
@@ -58,7 +58,7 @@ public class GradeUIController implements Initializable {
         Grade tempGrade = new Grade("AddClassName", "AddGrade");
         Stage theStage = (Stage) addRowButton.getScene().getWindow();
         GradeCntl.getGradeCntl(theStage).addGradeRow(tempGrade);
-        listOfGrades = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getgradeList().getGradeData();
+        listOfGrades = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getGradeList().getGradeData();
         gradeTable.setItems(listOfGrades);
     }
     

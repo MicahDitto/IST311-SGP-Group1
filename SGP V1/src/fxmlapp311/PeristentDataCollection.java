@@ -26,11 +26,11 @@ public class PeristentDataCollection implements Serializable{
         }
     }
     
-    public UserList getuserList(){
+    public UserList getUserList(){
         return theUserList;
     }
     
-    public GradeList getgradeList(){
+    public GradeList getGradeList(){
         return theGradeList;
     }
     

@@ -24,7 +24,7 @@ public class UserCntl {
     private ObservableList<User> theListOfUsers;
     
     private UserCntl(Stage theExistingStage){
-        theListOfUsers = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getuserList().getUserData();
+        theListOfUsers = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getUserList().getUserData();
         stage = theExistingStage;
         this.setUpUserListScene();
         stage.show();
@@ -53,8 +53,8 @@ public class UserCntl {
         }
     }
     
-    public void addUserRow(User newUser){
-        PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getuserList().getUserData().add(newUser);
+    public void addUserToList(User newUser){
+        PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getUserList().getUserData().add(newUser);
         PersistentDataCntl.getPersistentDataCntl().writeSerializedDataModel();
     }
     

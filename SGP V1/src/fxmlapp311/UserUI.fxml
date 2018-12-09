@@ -23,6 +23,7 @@
          </AnchorPane>
         </content>
       </ScrollPane>
-      <Button fx:id="getSelectedRowButton" layoutX="432.0" layoutY="337.0" mnemonicParsing="false" onAction="#getSelectedRow" text="Get Selected Row" />
+      <Button fx:id="getSelectedRowButton" layoutX="432.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleGetSelectedRowButton" text="Get Selected Row" />
+      <Button fx:id="backToNavigationButton" cancelButton="true" layoutX="50.0" layoutY="337.0" mnemonicParsing="false" onAction="#handleBackToNavigationButton" text="Back To Navigation" />
    </children>
 </AnchorPane>

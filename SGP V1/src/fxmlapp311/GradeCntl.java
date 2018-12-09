@@ -16,7 +16,7 @@ public class GradeCntl {
     private ObservableList<Grade> theListOfGrades;
     
     private GradeCntl(Stage theExistingStage){
-        theListOfGrades = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getgradeList().getGradeData();
+        theListOfGrades = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getGradeList().getGradeData();
         stage = theExistingStage;
         this.setUpGradeListScene();
         stage.show();
@@ -46,7 +46,7 @@ public class GradeCntl {
     }
     
     public void addGradeRow(Grade newGrade){
-        PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getgradeList().getGradeData().add(newGrade);
+        PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getGradeList().getGradeData().add(newGrade);
         PersistentDataCntl.getPersistentDataCntl().writeSerializedDataModel();
     }
     
