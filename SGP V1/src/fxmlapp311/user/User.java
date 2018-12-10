@@ -5,7 +5,9 @@
  */
 package fxmlapp311.user;
 
+import fxmlapp311.grade.CourseGrade;
 import java.io.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -17,6 +19,7 @@ public class User implements Serializable{
     private String lastName  = new String();
     private String username  = new String();
     private String password  = new String();
+    private ArrayList<CourseGrade> gradeList = new ArrayList();
 
     public User(String newFirstName, String newLastName, String newUsername, String newPassword){
         setFirstName(newFirstName);

@@ -11,9 +11,9 @@ import javafx.collections.ObservableList;
 
 public class GradeCntl {
     
-    @FXML private Stage stage;
+    private Stage stage;
     private static GradeCntl theGradeCntl;
-    private ObservableList<Grade> theListOfGrades;
+    private ObservableList<CourseGrade> theListOfGrades;
     
     private GradeCntl(Stage theExistingStage){
         theListOfGrades = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getgradeList().getGradeData();
@@ -31,7 +31,7 @@ public class GradeCntl {
         }
     }
     
-    @FXML public void setUpGradeListScene(){
+    public void setUpGradeListScene(){
         Parent root;
         Scene scene;
         try{
@@ -45,12 +45,12 @@ public class GradeCntl {
         }
     }
     
-    public void addGradeRow(Grade newGrade){
+    public void addGradeRow(CourseGrade newGrade){
         PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getgradeList().getGradeData().add(newGrade);
         PersistentDataCntl.getPersistentDataCntl().writeSerializedDataModel();
     }
     
-    public ObservableList<Grade> getListOfGrades(){
+    public ObservableList<CourseGrade> getListOfGrades(){
         return theListOfGrades;
     }
     

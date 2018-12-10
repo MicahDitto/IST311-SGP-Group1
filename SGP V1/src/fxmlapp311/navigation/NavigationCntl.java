@@ -6,6 +6,7 @@
 package fxmlapp311.navigation;
 
 import fxmlapp311.grade.GradeCntl;
+import fxmlapp311.gradehub.GradeHubCntl;
 import fxmlapp311.login.LoginCntl;
 import fxmlapp311.navigation.ui.NavigationUICntl;
 import fxmlapp311.user.UserCntl;
@@ -24,8 +25,9 @@ import java.io.IOException;
  */
 public class NavigationCntl {
     
-    @FXML private Stage theStage;
-    @FXML private Text actiontarget;
+    private Stage theStage;
+    private Text actiontarget;
+    public GradeHubCntl theGradeHubCntl;
     private static NavigationCntl theNavigationCntl;
     public LoginCntl theParentController;
     
@@ -42,7 +44,7 @@ public class NavigationCntl {
 
 
     
-    @FXML public void setUpNavigationScene() throws IOException {
+    public void setUpNavigationScene() throws IOException {
 
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("ui/NavigationUI.fxml"));
@@ -71,5 +73,15 @@ public class NavigationCntl {
     public void exit(){
         System.exit(0);
     }
+    
+    public void show() throws IOException{
+        this.setUpNavigationScene();
+    }
+
+    public void getGradeHubCntl() throws IOException {
+        theGradeHubCntl = new GradeHubCntl(this, theStage);
+    }
+
+    
     
 }

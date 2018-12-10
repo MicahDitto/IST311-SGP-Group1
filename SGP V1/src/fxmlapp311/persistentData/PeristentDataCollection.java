@@ -5,7 +5,7 @@
  */
 package fxmlapp311.persistentData;
 
-import fxmlapp311.grade.GradeList;
+import fxmlapp311.grade.CourseGradeList;
 import fxmlapp311.user.UserList;
 
 import java.io.*;
@@ -17,7 +17,7 @@ import java.io.*;
 public class PeristentDataCollection implements Serializable{
     
     private UserList theUserList;
-    private GradeList theGradeList;
+    private CourseGradeList theGradeList;
     // All other persistent data will go below here
     
     public PeristentDataCollection(){
@@ -25,7 +25,7 @@ public class PeristentDataCollection implements Serializable{
             theUserList = new UserList();
         }
         if(theGradeList == null){
-            theGradeList = new GradeList();
+            theGradeList = new CourseGradeList();
         }
     }
     
@@ -33,7 +33,7 @@ public class PeristentDataCollection implements Serializable{
         return theUserList;
     }
     
-    public GradeList getgradeList(){
+    public CourseGradeList getgradeList(){
         return theGradeList;
     }
     

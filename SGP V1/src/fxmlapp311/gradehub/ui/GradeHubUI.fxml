@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="368.0" prefWidth="580.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.112" fx:controller="fxmlapp311.gradehub.ui.GradeHubUICntl">
+   <children>
+      <AnchorPane prefHeight="368.0" prefWidth="567.0">
+         <children>
+            <Button fx:id="predictGPAButton" layoutX="38.0" layoutY="305.0" mnemonicParsing="false" onAction="#handlePredictGPAButton" prefHeight="27.0" prefWidth="208.0" text="Predict GPA" />
+            <Button fx:id="predictCourseGradeButton" layoutX="345.0" layoutY="305.0" mnemonicParsing="false" onAction="#handlePredictedCourseGradeButton" text="Predict Selected Course Grade" />
+            <TableView fx:id="gradeHubTable" layoutX="1.0" layoutY="45.0" prefHeight="250.0" prefWidth="583.0">
+              <columns>
+                <TableColumn fx:id="courseNameColumn" prefWidth="454.0" text="Course Name" />
+                <TableColumn fx:id="gradeColumn" prefWidth="145.0" text="Grade" />
+              </columns>
+            </TableView>
+            <Button fx:id="backButton" layoutX="9.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

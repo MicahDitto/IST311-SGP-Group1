@@ -23,15 +23,15 @@ public class CanvasWrapper {
     private ArrayList<CourseGrade> belowAvgGrades;
     private ArrayList<CourseGrade> badGrades;
     
-    CourseGrade calcA = new CourseGrade("Calculus 1", "A");
-    CourseGrade calcB = new CourseGrade("Calculus 1", "B");
-    CourseGrade calcC = new CourseGrade("Calculus 1", "C");
-    CourseGrade chemA = new CourseGrade("Chem 110", "A");
-    CourseGrade chemB = new CourseGrade("Chem 110", "B");
-    CourseGrade chemC = new CourseGrade("Chem 110", "C");
-    CourseGrade econA = new CourseGrade("Econ 102", "A");
-    CourseGrade econB = new CourseGrade("Econ 102", "B");
-    CourseGrade econC = new CourseGrade("Econ 102", "C");
+    CourseGrade calcA = new CourseGrade("Calc 1", 95);
+    CourseGrade calcB = new CourseGrade("Calc 1", 85);
+    CourseGrade calcC = new CourseGrade("Calc 1", 75);
+    CourseGrade chemA = new CourseGrade("Chem 110", 95);
+    CourseGrade chemB = new CourseGrade("Chem 110", 85);
+    CourseGrade chemC = new CourseGrade("Chem 110", 75);
+    CourseGrade econA = new CourseGrade("Econ 102", 95);
+    CourseGrade econB = new CourseGrade("Econ 102", 85);
+    CourseGrade econC = new CourseGrade("Econ 102", 75);
     
     
     public CanvasWrapper(){
@@ -57,20 +57,20 @@ public class CanvasWrapper {
     
     private void generateAverageGrades() {
         averageGrades.add(calcB);
-        averageGrades.add(chemB);
+        averageGrades.add(chemA);
         averageGrades.add(econB);
     }
     
     private void generateBelowAvgGrades() {
         belowAvgGrades.add(calcB);
-        belowAvgGrades.add(chemB);
+        belowAvgGrades.add(chemC);
         belowAvgGrades.add(econC);
     }
     
     private void generateBadGrades() {
         badGrades.add(calcC);
         badGrades.add(chemC);
-        badGrades.add(econA);
+        badGrades.add(econC);
     }
 
     public ArrayList<CourseGrade> getAllA() {

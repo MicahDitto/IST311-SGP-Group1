@@ -12,27 +12,27 @@ package fxmlapp311.grade;
 public class CourseGrade {
     
     private String course;
-    private String letterGrade;
+    private double percentage;
 
-    public CourseGrade(String course, String letterGrade) {
+    public CourseGrade(String course, double percentage) {
         this.course = course;
-        this.letterGrade = letterGrade;
+        this.percentage = percentage;
     }
 
     public String getCourse() {
         return course;
     }
 
-    public String getLetterGrade() {
-        return letterGrade;
+    public double getPercentage() {
+        return percentage;
     }
 
     public void setCourse(String course) {
         this.course = course;
     }
 
-    public void setLetterGrade(String letterGrade) {
-        this.letterGrade = letterGrade;
+    public void setLetterGrade(double percentage) {
+        this.percentage = percentage;
     }
     
     

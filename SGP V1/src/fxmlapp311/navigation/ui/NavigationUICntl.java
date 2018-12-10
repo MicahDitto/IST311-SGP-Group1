@@ -1,14 +1,18 @@
 package fxmlapp311.navigation.ui;
 
 import fxmlapp311.navigation.NavigationCntl;
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
  
 public class NavigationUICntl {
     public NavigationCntl theParentController;
     @FXML private Text actiontarget;
+    @FXML
+    private Button gradeHubButton;
     
     
     @FXML protected void handleExitButtonAction(ActionEvent event) {
@@ -41,11 +45,16 @@ public class NavigationUICntl {
         actiontarget.setText("UC4 button pressed");
     }
     
-    @FXML protected void HandleProfile(ActionEvent event) {
+    protected void HandleProfile(ActionEvent event) {
         actiontarget.setText("Profile");
         Stage theStage = (Stage) actiontarget.getScene().getWindow();
         theStage.hide();
         theParentController.getUserCntl(theStage);
+    }
+
+    @FXML
+    private void handleGradeHubButton(ActionEvent event) throws IOException {
+        theParentController.getGradeHubCntl();
     }
 
 }

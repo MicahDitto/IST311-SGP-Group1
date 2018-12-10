@@ -20,14 +20,14 @@ import javafx.scene.control.TextField;
 public class GradeUIController implements Initializable {
     
     @FXML
-    private TableView<Grade> gradeTable = new TableView<Grade>();
+    private TableView<CourseGrade> gradeTable = new TableView<CourseGrade>();
     
     @FXML
-    private TableColumn<Grade, String> classNameColumn  = new TableColumn("Class Name");;
+    private TableColumn<CourseGrade, String> classNameColumn  = new TableColumn("Class Name");;
     @FXML
-    private TableColumn<Grade, String> gradeColumn = new TableColumn("Grade");;
+    private TableColumn<CourseGrade, String> gradeColumn = new TableColumn("Grade");;
     @FXML
-    private ObservableList<Grade> listOfGrades;
+    private ObservableList<CourseGrade> listOfGrades;
     @FXML
     private Button getSelectedRowButton;
     @FXML
@@ -42,8 +42,8 @@ public class GradeUIController implements Initializable {
         listOfGrades = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getgradeList().getGradeData();
     
         // Set up the table columns and link them to the table data fields
-        classNameColumn.setCellValueFactory(new PropertyValueFactory<Grade,String>("className"));
-        gradeColumn.setCellValueFactory(new PropertyValueFactory<Grade,String>("grade"));
+        classNameColumn.setCellValueFactory(new PropertyValueFactory<CourseGrade,String>("className"));
+        gradeColumn.setCellValueFactory(new PropertyValueFactory<CourseGrade,String>("grade"));
         
         SimpleStringProperty s = new SimpleStringProperty("Test");
         TextField t = new TextField("Test");
@@ -57,17 +57,12 @@ public class GradeUIController implements Initializable {
     
     @FXML
     public void addRow(){
-        Grade tempGrade = new Grade("AddClassName", "AddGrade");
+        CourseGrade tempGrade = new CourseGrade("AddClassName", 99.9);
         Stage theStage = (Stage) addRowButton.getScene().getWindow();
         GradeCntl.getGradeCntl(theStage).addGradeRow(tempGrade);
         listOfGrades = PersistentDataCntl.getPersistentDataCntl().getPeristentDataCollection().getgradeList().getGradeData();
         gradeTable.setItems(listOfGrades);
     }
     
-    @FXML
-    public void getSelectedRow(){
-        Grade tempGrade = gradeTable.getSelectionModel().getSelectedItem();
-        System.out.println(tempGrade.getClassName());
-    }
     
 }
