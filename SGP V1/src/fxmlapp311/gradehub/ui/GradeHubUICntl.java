@@ -55,8 +55,8 @@ public class GradeHubUICntl implements Initializable{
 
     @FXML
     private void handlePredictedCourseGradeButton(ActionEvent event) throws IOException {
-    CourseGrade selectedCourseGrade = this.gradeHubTable.getSelectionModel().getSelectedItem();
-    theParentController.getPredictedCourseGrade(selectedCourseGrade);
+        CourseGrade selectedCourseGrade = this.gradeHubTable.getSelectionModel().getSelectedItem();
+        theParentController.getPredictedCourseGrade(selectedCourseGrade);
     }
 
     @FXML

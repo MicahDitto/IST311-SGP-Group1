@@ -8,6 +8,7 @@ package fxmlapp311.gradehub;
 import fxmlapp311.grade.CourseGrade;
 import fxmlapp311.gradehub.ui.GradeHubUICntl;
 import fxmlapp311.navigation.NavigationCntl;
+import fxmlapp311.predictCourseGrade.PredictCourseGradeCntl;
 import fxmlapp311.predictgpa.PredictGPACntl;
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;

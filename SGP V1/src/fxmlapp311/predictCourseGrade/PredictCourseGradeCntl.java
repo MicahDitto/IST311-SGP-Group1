@@ -5,6 +5,8 @@
  */
 package fxmlapp311.predictCourseGrade;
 
+import fxmlapp311.grade.CourseGrade;
+import fxmlapp311.gradehub.GradeHubCntl;
 import fxmlapp311.predictcoursegrade.ui.PredictCourseGradeUICntl;
 /**
  *
@@ -12,9 +14,14 @@ import fxmlapp311.predictcoursegrade.ui.PredictCourseGradeUICntl;
  */
 public class PredictCourseGradeCntl {
 
-    private PredictCourseGradeUICntl predictCourseGradeUICntl = new PredictCourseGradeUICntl();
+    public PredictCourseGradeUICntl predictCourseGradeUICntl;
     
     public PredictCourseGradeCntl() {
+        
+    }
+
+    public PredictCourseGradeCntl(GradeHubCntl aThis, CourseGrade selectedCourseGrade) {
+        System.out.println("Testing");    
         
     }
     

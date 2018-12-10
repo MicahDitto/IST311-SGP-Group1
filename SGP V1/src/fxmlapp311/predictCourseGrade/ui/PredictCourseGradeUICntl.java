@@ -5,7 +5,8 @@
  */
 package fxmlapp311.predictcoursegrade.ui;
 
-import fxmlapp311.gradehub.PredictCourseGradeCntl;
+
+import fxmlapp311.predictCourseGrade.PredictCourseGradeCntl;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
