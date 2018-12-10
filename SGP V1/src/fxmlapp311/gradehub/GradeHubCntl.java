@@ -58,7 +58,7 @@ public class GradeHubCntl {
 
     public void getPredictedCourseGrade(CourseGrade selectedCourseGrade) throws IOException {
         theStage.hide();
-        PredictCourseGradeCntl PredictCourseGradeCntl = new PredictCourseGradeCntl(this, selectedCourseGrade);
+        PredictCourseGradeCntl PredictCourseGradeCntl = new PredictCourseGradeCntl(this, selectedCourseGrade, theStage);
     }
     
     

@@ -7,22 +7,41 @@ package fxmlapp311.predictCourseGrade;
 
 import fxmlapp311.grade.CourseGrade;
 import fxmlapp311.gradehub.GradeHubCntl;
-import fxmlapp311.predictcoursegrade.ui.PredictCourseGradeUICntl;
+import fxmlapp311.predictCourseGrade.ui.PredictCourseGradeUICntl;
+import java.io.IOException;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 /**
  *
  * @author micahdittmar
  */
 public class PredictCourseGradeCntl {
-
+    GradeHubCntl gradeHubCntl;
+    Stage theStage;
+    PredictCourseGradeCntl theCourseGradeCntl;
     public PredictCourseGradeUICntl predictCourseGradeUICntl;
     
-    public PredictCourseGradeCntl() {
-        
+    
+    public void show() throws IOException{
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("ui/PredictCourseGradeUI.fxml"));
+        loader.load();
+        this.predictCourseGradeUICntl = loader.getController();
+        Parent root = loader.getRoot();
+        Scene scene = new Scene(root);
+        theStage.setTitle("Grade Hub");
+        theStage.setScene(scene);
+        predictCourseGradeUICntl.theParentController = this;
+        theStage.show();
     }
 
-    public PredictCourseGradeCntl(GradeHubCntl aThis, CourseGrade selectedCourseGrade) {
+    public PredictCourseGradeCntl(GradeHubCntl gradeHubCntl, CourseGrade selectedCourseGrade, Stage theStage) throws IOException {
         System.out.println("Testing");    
-        
+        this.gradeHubCntl = gradeHubCntl;
+        this.theStage = theStage;
+        this.show();
     }
     
 }
