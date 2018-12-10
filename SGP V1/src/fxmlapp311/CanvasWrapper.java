@@ -17,11 +17,11 @@ public class CanvasWrapper {
     
     //Attributes of grades. It generates user grades
     
-    private ArrayList<CourseGrade> allA;
-    private ArrayList<CourseGrade> goodGrades;
-    private ArrayList<CourseGrade> averageGrades;
-    private ArrayList<CourseGrade> belowAvgGrades;
-    private ArrayList<CourseGrade> badGrades;
+    private ArrayList<CourseGrade> allA = new ArrayList();
+    private ArrayList<CourseGrade> goodGrades = new ArrayList();
+    private ArrayList<CourseGrade> averageGrades = new ArrayList();
+    private ArrayList<CourseGrade> belowAvgGrades = new ArrayList();
+    private ArrayList<CourseGrade> badGrades = new ArrayList();
     
     CourseGrade calcA = new CourseGrade("Calc 1", 95);
     CourseGrade calcB = new CourseGrade("Calc 1", 85);

@@ -15,7 +15,6 @@ import java.util.*;
  */
 public class UserList implements Serializable{
     
-    //private ObservableList<User> theListOfUsers;
     private ArrayList<User> theListOfUsersAL;
     
     public UserList(){

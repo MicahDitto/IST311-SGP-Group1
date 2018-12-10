@@ -5,11 +5,13 @@
  */
 package fxmlapp311.grade;
 
+import java.io.Serializable;
+
 /**
  *
  * @author micahdittmar
  */
-public class CourseGrade {
+public class CourseGrade implements Serializable {
     
     private String course;
     private double percentage;
