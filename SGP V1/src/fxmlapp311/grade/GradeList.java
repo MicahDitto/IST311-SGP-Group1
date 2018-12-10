@@ -1,5 +1,5 @@
 
-package fxmlapp311;
+package fxmlapp311.grade;
 
 import javafx.collections.*;
 import java.io.*;

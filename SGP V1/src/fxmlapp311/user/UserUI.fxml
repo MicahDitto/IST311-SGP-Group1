@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlapp311.GradeUIController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlapp311.user.UserUICntl">
    <children>
       <ScrollPane layoutX="65.0" layoutY="75.0" prefHeight="232.0" prefWidth="472.0">
         <content>
@@ -14,8 +14,9 @@
             <children>
                   <TableView id="userTable" fx:id="userTable" prefHeight="232.0" prefWidth="472.0" AnchorPane.bottomAnchor="-32.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-272.0" AnchorPane.topAnchor="0.0">
                     <columns>
-                      <TableColumn id="classNameColumn" fx:id="classNameColumn" prefWidth="100.0" text="Class Name" />
-                      <TableColumn id="gradeColumn" fx:id="gradeColumn" prefWidth="100.00" text="Grade" />
+                      <TableColumn id="lastNameColumn" fx:id="lastNameColumn" prefWidth="100.0" text="Last Name" />
+                      <TableColumn id="firstNameColumn" fx:id="firstNameColumn" prefWidth="100.0" text="First Name" />
+                      <TableColumn id="usernameColumn" fx:id="usernameColumn" prefWidth="100.0" text="Username" />
                     </columns>
                   </TableView>
             </children>

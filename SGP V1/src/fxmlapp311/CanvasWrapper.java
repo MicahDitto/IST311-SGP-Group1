@@ -5,6 +5,8 @@
  */
 package fxmlapp311;
 
+import fxmlapp311.grade.CourseGrade;
+
 import java.util.ArrayList;
 
 /**

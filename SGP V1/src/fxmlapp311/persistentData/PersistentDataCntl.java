@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fxmlapp311;
+package fxmlapp311.persistentData;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

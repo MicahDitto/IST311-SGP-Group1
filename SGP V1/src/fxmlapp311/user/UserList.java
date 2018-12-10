@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package fxmlapp311;
+package fxmlapp311.user;
 
 import javafx.collections.*;
 import java.io.*;
@@ -41,6 +41,21 @@ public class UserList implements Serializable{
     public User addUser(String firstname, String lastname, String username, String password){
         User newUser = new User(firstname, lastname, username, password);
         return newUser;
+    }
+
+    public boolean validateUser(String username, String password){
+        boolean isValid = false;
+        ObservableList<User> theList = this.getUserData();
+        for (User aTheList : theList) {
+            if (aTheList.getUsername().equals(username)) {
+                System.out.println("Username match");
+                if (aTheList.getPassword().equals(password)) {
+                    isValid = true;
+                    break;
+                }
+            }
+        }
+        return isValid;
     }
     
     

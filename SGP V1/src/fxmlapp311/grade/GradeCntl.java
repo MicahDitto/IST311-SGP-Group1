@@ -1,10 +1,10 @@
-package fxmlapp311;
+package fxmlapp311.grade;
 
+import fxmlapp311.persistentData.PersistentDataCntl;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.collections.ObservableList;
 
@@ -35,7 +35,7 @@ public class GradeCntl {
         Parent root;
         Scene scene;
         try{
-            root = FXMLLoader.load(getClass().getResource("GradeUI.fxml"));
+            root = FXMLLoader.load(getClass().getResource("fxmlapp311/grade/GradeUI.fxml"));
             scene = new Scene(root);
             stage.setTitle("Grades");
             stage.setScene(scene);
