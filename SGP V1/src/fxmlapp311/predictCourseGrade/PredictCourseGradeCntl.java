@@ -9,6 +9,7 @@ import fxmlapp311.grade.CourseGrade;
 import fxmlapp311.gradehub.GradeHubCntl;
 import fxmlapp311.predictCourseGrade.ui.PredictCourseGradeUICntl;
 import java.io.IOException;
+import java.util.Random;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -43,5 +44,18 @@ public class PredictCourseGradeCntl {
         this.theStage = theStage;
         this.show();
     }
+
+    public void backToGradeHubCntl() throws IOException  {
+        theStage.hide();
+        gradeHubCntl.show();
+    }
+    
+    public static double getRandomNumberInRange(double min, double max) {
+        if (min >= max) {
+                throw new IllegalArgumentException("max must be greater than min");
+        }
+        return (Math.random() * ((max - min) + 1)) + min;
+    }
+    
     
 }

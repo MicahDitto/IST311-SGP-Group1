@@ -7,6 +7,7 @@ package fxmlapp311.predictCourseGrade.ui;
 
 
 import fxmlapp311.predictCourseGrade.PredictCourseGradeCntl;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -32,6 +33,7 @@ public class PredictCourseGradeUICntl implements Initializable {
     @FXML
     private Button backButton;
 
+    
     /**
      * Initializes the controller class.
      */
@@ -42,11 +44,14 @@ public class PredictCourseGradeUICntl implements Initializable {
 
     @FXML
     private void handlePredictButton(ActionEvent event) {
+        double theGrade = Double.parseDouble(CurrentGradeTextField.getText());
+        double predictedGrade = theGrade * (Math.random() *.05 + -.05 + 1) + 2;
+        predictedCourseGradeTextField.setText(Double.toString(predictedGrade));
     }
 
     @FXML
-    private void handleBackButton(ActionEvent event) {
-        
+    private void handleBackButton(ActionEvent event) throws IOException {
+        theParentController.backToGradeHubCntl();
     }
     
 }
