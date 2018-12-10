@@ -5,6 +5,7 @@
  */
 package fxmlapp311.user;
 
+import fxmlapp311.CanvasWrapper;
 import fxmlapp311.grade.CourseGrade;
 import java.io.*;
 import java.util.ArrayList;
@@ -19,13 +20,17 @@ public class User implements Serializable{
     private String lastName  = new String();
     private String username  = new String();
     private String password  = new String();
-    private ArrayList<CourseGrade> gradeList = new ArrayList();
+    private ArrayList<CourseGrade> gradeList;
+    private CanvasWrapper cW = new CanvasWrapper();
 
     public User(String newFirstName, String newLastName, String newUsername, String newPassword){
         setFirstName(newFirstName);
         setLastName(newLastName);
         setUsername(newUsername);
         setPassword(newPassword);
+        gradeList = new ArrayList();
+        this.gradeList = cW.getRandomGrades();
+        System.out.println(this.gradeList);
     }
 
     public String getFirstName() {
@@ -62,6 +67,10 @@ public class User implements Serializable{
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public ArrayList<CourseGrade> getGradeList() {
+        return gradeList;
     }
 
 }

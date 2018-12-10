@@ -9,9 +9,9 @@ import fxmlapp311.grade.GradeCntl;
 import fxmlapp311.gradehub.GradeHubCntl;
 import fxmlapp311.login.LoginCntl;
 import fxmlapp311.navigation.ui.NavigationUICntl;
+import fxmlapp311.user.User;
 import fxmlapp311.user.UserCntl;
 import javafx.stage.Stage;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -30,10 +30,13 @@ public class NavigationCntl {
     public GradeHubCntl theGradeHubCntl;
     private static NavigationCntl theNavigationCntl;
     public LoginCntl theParentController;
+    public User theUser;
     
-    public NavigationCntl(Stage theStage, LoginCntl theParentController){
+    public NavigationCntl(Stage theStage, LoginCntl theParentController, User theUser){
         this.theStage = theStage;
         this.theParentController = theParentController;
+        this.theUser = theUser;
+        System.out.println(theUser);
         try{
             this.setUpNavigationScene();
         } catch (IOException ex){
@@ -79,7 +82,8 @@ public class NavigationCntl {
     }
 
     public void getGradeHubCntl() throws IOException {
-        theGradeHubCntl = new GradeHubCntl(this, theStage);
+        theGradeHubCntl = new GradeHubCntl(this, theStage, theUser);
+        System.out.println(theUser.getGradeList());
     }
 
     

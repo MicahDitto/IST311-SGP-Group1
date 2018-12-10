@@ -7,6 +7,7 @@ package fxmlapp311.login.ui;
 
 import fxmlapp311.login.LoginCntl;
 import fxmlapp311.navigation.NavigationCntl;
+import fxmlapp311.user.UserList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -44,6 +45,7 @@ public class LoginUICntl {
         String pw = passwordField.getText();
 
         if(theParentController.authenticate(un, pw)){
+            UserList.getInstance().setAuthedUser(UserList.getInstance().getUser(un));
             theParentController.showNavigationCntl(un);
         } else {
             usernameField.setText("");

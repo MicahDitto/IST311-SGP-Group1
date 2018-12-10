@@ -21,16 +21,15 @@ public class PeristentDataCollection implements Serializable{
     // All other persistent data will go below here
     
     public PeristentDataCollection(){
-        if(theUserList == null){
-            theUserList = new UserList();
-        }
+        
+        UserList.getInstance();
         if(theGradeList == null){
             theGradeList = new CourseGradeList();
         }
     }
     
     public UserList getuserList(){
-        return theUserList;
+        return UserList.getInstance();
     }
     
     public CourseGradeList getgradeList(){

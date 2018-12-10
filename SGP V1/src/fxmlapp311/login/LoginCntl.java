@@ -10,14 +10,11 @@ import java.io.IOException;
 import fxmlapp311.login.ui.LoginUICntl;
 import fxmlapp311.navigation.NavigationCntl;
 import fxmlapp311.profile.ProfileCntl;
+import fxmlapp311.user.User;
 import fxmlapp311.user.UserCntl;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.text.*;
-import javafx.scene.control.*;
 import javafx.stage.Stage;
  
 public class LoginCntl {
@@ -55,6 +52,9 @@ public class LoginCntl {
     }
     public void showNavigationCntl(String username){
         theStage.hide();
-        NavigationCntl theNavigationCntl = new NavigationCntl(theStage, this);
+        System.out.println(theUserCntl.getListOfUsers().getUser(username));
+        User tempUser = theUserCntl.getListOfUsers().getUser(username);
+        
+        NavigationCntl theNavigationCntl = new NavigationCntl(theStage, this, tempUser);
     }
 }

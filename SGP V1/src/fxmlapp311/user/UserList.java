@@ -16,9 +16,18 @@ import java.util.*;
 public class UserList implements Serializable{
     
     private ArrayList<User> theListOfUsersAL;
+    private static UserList singleton;
+    private User currentlyAuthenticatedUser;
     
-    public UserList(){
+    private UserList(){
         theListOfUsersAL = getTestUsers();
+    }
+    
+    public static UserList getInstance(){
+        if(singleton == null){
+            singleton = new UserList();
+        }
+            return singleton;
     }
     
     public ObservableList<User> getUserData() {
@@ -28,6 +37,14 @@ public class UserList implements Serializable{
         return theListOfUsers;
     }
     
+    public void setAuthedUser(User u){
+        this.currentlyAuthenticatedUser = u;
+    }
+    
+    public User getCurrentlyAuthenticatedUser(){
+        return this.currentlyAuthenticatedUser;
+    }
+    
     public ArrayList<User> getTestUsers(){
         ArrayList<User> testUsers = new ArrayList();
         for (int i = 0; i < 100; i++) {
@@ -35,6 +52,15 @@ public class UserList implements Serializable{
             testUsers.add(newUser);
         }
         return testUsers;
+    }
+    
+    public User getUser(String username){
+        for(int i = 0; i < theListOfUsersAL.size(); i++) {
+            if (theListOfUsersAL.get(i).getUsername().equals(username)) {
+                return theListOfUsersAL.get(i);
+            }
+        }
+        return new User("","","","");
     }
     
     public User addUser(String firstname, String lastname, String username, String password){

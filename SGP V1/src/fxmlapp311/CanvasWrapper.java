@@ -6,6 +6,7 @@
 package fxmlapp311;
 
 import fxmlapp311.grade.CourseGrade;
+import java.io.Serializable;
 
 import java.util.ArrayList;
 
@@ -13,7 +14,7 @@ import java.util.ArrayList;
  *
  * @author micahdittmar
  */
-public class CanvasWrapper {
+public class CanvasWrapper implements Serializable{
     
     //Attributes of grades. It generates user grades
     

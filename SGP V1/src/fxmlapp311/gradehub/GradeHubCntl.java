@@ -10,6 +10,7 @@ import fxmlapp311.gradehub.ui.GradeHubUICntl;
 import fxmlapp311.navigation.NavigationCntl;
 import fxmlapp311.predictCourseGrade.PredictCourseGradeCntl;
 import fxmlapp311.predictgpa.PredictGPACntl;
+import fxmlapp311.user.User;
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,14 +22,16 @@ import javafx.stage.Stage;
  * @author micahdittmar
  */
 public class GradeHubCntl {
-    NavigationCntl theNavigationCntl;
-    Stage theStage;
-    GradeHubUICntl theGradeHubUICntl;
+    public NavigationCntl theNavigationCntl;
+    public Stage theStage;
+    public GradeHubUICntl theGradeHubUICntl;
+    public User theUser;
     
 
-    public GradeHubCntl(NavigationCntl theNavigationCntl, Stage theStage) throws IOException {
+    public GradeHubCntl(NavigationCntl theNavigationCntl, Stage theStage, User theUser) throws IOException {
         this.theNavigationCntl = theNavigationCntl;
         this.theStage = theStage;
+        this.theUser = theUser;
         this.show();
     }
     
@@ -61,5 +64,9 @@ public class GradeHubCntl {
         PredictCourseGradeCntl PredictCourseGradeCntl = new PredictCourseGradeCntl(this, selectedCourseGrade, theStage);
     }
     
+    public User getTheUser(){
+        
+        return theUser;
+    }
     
 }

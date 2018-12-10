@@ -9,6 +9,8 @@ import fxmlapp311.CanvasWrapper;
 import fxmlapp311.grade.CourseGrade;
 import fxmlapp311.grade.CourseGradeList;
 import fxmlapp311.gradehub.GradeHubCntl;
+import fxmlapp311.user.User;
+import fxmlapp311.user.UserList;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -43,10 +45,14 @@ public class GradeHubUICntl implements Initializable{
     private TableColumn<CourseGrade, Double> gradeColumn;
     @FXML
     private Button backButton;
+    
+    
     private ObservableList<CourseGrade> obsCourseGrades;
+    
     
     public GradeHubCntl theParentController;
     private CanvasWrapper cW = new CanvasWrapper();
+    public User theUser;
 
     @FXML
     private void handlePredictGPAButton(ActionEvent event) {
@@ -63,10 +69,12 @@ public class GradeHubUICntl implements Initializable{
     private void handleBackButton(ActionEvent event) throws IOException {
         theParentController.backToNavigationCntl();
     }
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        ArrayList<CourseGrade> gradesForTable = cW.getRandomGrades(); //Get FROM USER
+    
+    public void setUserInfo(User theUser){
+        this.theUser = theUser;
+        ArrayList<CourseGrade> gradesForTable = theUser.getGradeList(); //Get FROM USER
+       //System.out.println(theParentController.theNavigationCntl.theUser.getGradeList());
+       //ArrayList<CourseGrade> gradesForTable = ; //Get FROM USER
        this.obsCourseGrades = FXCollections.observableArrayList(gradesForTable);
        this.gradeHubTable.setItems(this.obsCourseGrades);
        this.courseNameColumn.setCellValueFactory(cellData -> {
@@ -78,6 +86,10 @@ public class GradeHubUICntl implements Initializable{
            CourseGrade cg = cellData.getValue();
        return new SimpleDoubleProperty(cg.getPercentage()).asObject();
        });
+    }
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+       this.setUserInfo(UserList.getInstance().getCurrentlyAuthenticatedUser());
     }
     
     
