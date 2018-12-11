@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package fxmlapp311.navigation;
-
-import fxmlapp311.grade.GradeCntl;
 import fxmlapp311.gradehub.GradeHubCntl;
 import fxmlapp311.login.LoginCntl;
 import fxmlapp311.navigation.ui.NavigationUICntl;
@@ -65,9 +63,6 @@ public class NavigationCntl {
         UserCntl.getUserCntl();
     }
     
-    public void getGradeCntl(Stage theStage){
-        GradeCntl.getGradeCntl(theStage);
-    }
     
     public void getProfileCntl(Stage theStage){
         //ProfileCntl.getProfileCntl(theStage);

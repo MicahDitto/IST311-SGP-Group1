@@ -4,16 +4,15 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.112" fx:controller="fxmlapp311.predictgpa.ui.PredictGPAUICntl">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlapp311.predictgpa.ui.PredictGPAUICntl">
    <children>
       <AnchorPane layoutX="-2.0" prefHeight="400.0" prefWidth="600.0">
          <children>
             <Button fx:id="predictButton" layoutX="264.0" layoutY="283.0" mnemonicParsing="false" onAction="#handlePredictButton" text="PREDICT" />
-            <TextField alignment="CENTER" layoutX="217.0" layoutY="59.0" text="Current GPA" />
+            <TextField alignment="CENTER" editable="false" layoutX="217.0" layoutY="59.0" text="Current GPA" />
             <TextField fx:id="currentGPATextField" layoutX="217.0" layoutY="131.0" />
             <Button fx:id="backButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
-            <TextField fx:id="predictGPAButton" layoutX="217.0" layoutY="338.0" onAction="#handlePredictButton" />
+            <TextField fx:id="predictGPAButton" editable="false" layoutX="217.0" layoutY="338.0" onAction="#handlePredictButton" />
          </children>
       </AnchorPane>
    </children>

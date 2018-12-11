@@ -4,14 +4,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlapp311.predictCourseGrade.ui.PredictCourseGradeUICntl">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxmlapp311.predictCourseGrade.ui.PredictCourseGradeUICntl">
    <children>
       <AnchorPane layoutY="-1.0" prefHeight="400.0" prefWidth="600.0">
          <children>
             <TextField alignment="CENTER" editable="false" layoutX="217.0" layoutY="43.0" text="Current Grade" />
             <TextField fx:id="CurrentGradeTextField" layoutX="217.0" layoutY="91.0" />
             <Button fx:id="predictButton" layoutX="271.0" layoutY="271.0" mnemonicParsing="false" onAction="#handlePredictButton" text="PREDICT" />
-            <TextField fx:id="predictedCourseGradeTextField" layoutX="224.0" layoutY="318.0" />
+            <TextField fx:id="predictedCourseGradeTextField" editable="false" layoutX="224.0" layoutY="318.0" />
             <Button fx:id="backButton" layoutX="14.0" layoutY="16.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
          </children>
       </AnchorPane>
