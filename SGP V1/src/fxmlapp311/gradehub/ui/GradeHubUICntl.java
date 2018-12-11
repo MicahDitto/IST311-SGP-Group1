@@ -55,7 +55,7 @@ public class GradeHubUICntl implements Initializable{
     public User theUser;
 
     @FXML
-    private void handlePredictGPAButton(ActionEvent event) {
+    private void handlePredictGPAButton(ActionEvent event) throws IOException {
         theParentController.getPredictGPACntl();
     }
 

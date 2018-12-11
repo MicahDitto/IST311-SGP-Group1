@@ -53,9 +53,9 @@ public class GradeHubCntl {
         theNavigationCntl.show();
     }
     
-    public void getPredictGPACntl(){
+    public void getPredictGPACntl() throws IOException{
         theStage.hide();
-        PredictGPACntl PredictGPACntl = new PredictGPACntl(this);
+        PredictGPACntl PredictGPACntl = new PredictGPACntl(this, theStage);
         
     }
 

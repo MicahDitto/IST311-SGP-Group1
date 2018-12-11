@@ -32,7 +32,7 @@ public class PredictCourseGradeCntl {
         this.predictCourseGradeUICntl = loader.getController();
         Parent root = loader.getRoot();
         Scene scene = new Scene(root);
-        theStage.setTitle("Grade Hub");
+        theStage.setTitle("Predict Course Grade");
         theStage.setScene(scene);
         predictCourseGradeUICntl.theParentController = this;
         theStage.show();

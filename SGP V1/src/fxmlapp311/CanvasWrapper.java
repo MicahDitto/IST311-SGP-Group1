@@ -27,6 +27,11 @@ public class CanvasWrapper implements Serializable{
     CourseGrade calcA = new CourseGrade("Calc 1", 95);
     CourseGrade calcB = new CourseGrade("Calc 1", 85);
     CourseGrade calcC = new CourseGrade("Calc 1", 75);
+    CourseGrade GPA1 = new CourseGrade("GPA", 4.0);
+    CourseGrade GPA2 = new CourseGrade("GPA", 3.75);
+    CourseGrade GPA3 = new CourseGrade("GPA", 3.0);
+    CourseGrade GPA4 = new CourseGrade("GPA", 2.25);
+    CourseGrade GPA5 = new CourseGrade("GPA", 2.0);
     CourseGrade chemA = new CourseGrade("Chem 110", 95);
     CourseGrade chemB = new CourseGrade("Chem 110", 85);
     CourseGrade chemC = new CourseGrade("Chem 110", 75);
@@ -48,30 +53,35 @@ public class CanvasWrapper implements Serializable{
         allA.add(calcA);
         allA.add(chemA);
         allA.add(econA);
+        allA.add(GPA1);
     }
     
     private void generateGoodGrades() {
         goodGrades.add(calcA);
         goodGrades.add(chemB);
         goodGrades.add(econA);
+        goodGrades.add(GPA2);
     }
     
     private void generateAverageGrades() {
         averageGrades.add(calcB);
-        averageGrades.add(chemA);
+        averageGrades.add(chemB);
         averageGrades.add(econB);
+        averageGrades.add(GPA3);
     }
     
     private void generateBelowAvgGrades() {
         belowAvgGrades.add(calcB);
         belowAvgGrades.add(chemC);
         belowAvgGrades.add(econC);
+        belowAvgGrades.add(GPA4);
     }
     
     private void generateBadGrades() {
         badGrades.add(calcC);
         badGrades.add(chemC);
         badGrades.add(econC);
+        badGrades.add(GPA5);
     }
 
     public ArrayList<CourseGrade> getAllA() {

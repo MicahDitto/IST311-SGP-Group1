@@ -47,6 +47,7 @@ public class PredictCourseGradeUICntl implements Initializable {
         double theGrade = Double.parseDouble(CurrentGradeTextField.getText());
         double predictedGrade = theGrade * (Math.random() *.05 + -.05 + 1) + 2;
         predictedCourseGradeTextField.setText(Double.toString(predictedGrade));
+        predictButton.setDisable(true);
     }
 
     @FXML
