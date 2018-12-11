@@ -26,24 +26,7 @@ public class NavigationUICntl {
         Stage theStage = (Stage) actiontarget.getScene().getWindow();
         theStage.hide();
         theParentController.getUserCntl(theStage);
-    }
-    
-    @FXML protected void handleUC2ButtonAction(ActionEvent event) {
-        actiontarget.setText("UC2 button pressed");
-        Stage theStage = (Stage) actiontarget.getScene().getWindow();
-        theStage.hide();
-        theParentController.getGradeCntl(theStage);
-    }
-    
-    
-    
-    @FXML protected void handleUC3ButtonAction(ActionEvent event) {
-        actiontarget.setText("UC3 button pressed");
-    }
-        
-    @FXML protected void handleUC4ButtonAction(ActionEvent event) {
-        actiontarget.setText("UC4 button pressed");
-    }
+    }  
     
     protected void HandleProfile(ActionEvent event) {
         actiontarget.setText("Profile");
